@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan(basePackages = {"org.checkout", "asset.pipeline"})
-//@ComponentScan({"", "asset.pipeline.springboot"})
 @EnableAutoConfiguration
 public class Main {
 

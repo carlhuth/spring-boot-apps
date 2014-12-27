@@ -1,0 +1,23 @@
+= Usage of gradle asset pipleline plugin
+
+see: http://davydotcom.com/blog/2014-12-21-spring-boot-with-the-asset-pipeline
+
+== Build
+
+* execute `./gradlew build` which will precompile `./assets` into `src/main/resources/static/assets`
+* run `Main.java` from with IDE
+* open browser at `http://localhost:8080/assets/app.js` to demonstrate that _app.js_ is found
+* open browser at `http://localhost:8080/index.html` with console output open which should show the `app.js Loaded` message.
+
+
+== Notes
+
+* `Main.java`: `@ComponentScan(basePackages = {"org.checkout", "asset.pipeline"})`
+
+[source,groovy]
+.build.gradle
+----
+assets {
+  compileDir = "src/main/resources/static/assets"
+}
+----

@@ -16,7 +16,6 @@ apply plugin: 'spring-boot'
 apply plugin: 'asset-pipeline'
 
 assets {
-//    compileDir = "${buildDir}/assetCompile/assets"
     compileDir = "src/main/resources/static/assets"
 }
 
