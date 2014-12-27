@@ -1,0 +1,39 @@
+buildscript {
+    ext {
+        springBootVersion = '1.2.0.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath 'com.bertramlabs.plugins:asset-pipeline-gradle:2.0.19'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+apply plugin: 'asset-pipeline'
+
+assets {
+//    compileDir = "${buildDir}/assetCompile/assets"
+    compileDir = "src/main/resources/static/assets"
+}
+
+jar {
+    from "${buildDir}/assetCompile"
+    baseName = 'demo'
+    version = '0.0.1-SNAPSHOT'
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile 'com.bertramlabs.plugins:asset-pipeline-spring-boot:2.0.19'
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
