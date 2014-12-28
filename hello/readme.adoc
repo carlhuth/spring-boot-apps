@@ -1,0 +1,5 @@
+see http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-first-application
+
+* Import `build.gradle` into your IDE
+* Run `Exampla.java`
+* point your browser at `http://localhost:8080/` which then should display `Hello World!`
