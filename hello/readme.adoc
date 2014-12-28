@@ -3,3 +3,8 @@ see http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting
 * Import `build.gradle` into your IDE
 * Run `Exampla.java`
 * point your browser at `http://localhost:8080/` which then should display `Hello World!`
+
+To run it from an executable jar:
+
+* on the commandline execute `./gradlew build` and then `java -jar build/libs/spring-boot-hello.jar`
+* point your browser at `http://localhost:8080/` which then should display `Hello World!`
