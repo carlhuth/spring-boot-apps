@@ -1,0 +1,19 @@
+see http://spring.io/guides/gs/accessing-data-gorm/
+
+Build app:
+
+  ./gradlew build
+
+Start app:
+
+  java -jar build/libs/gs-accessing-data-gorm-0.1.0.jar
+
+
+Run HTTP requests against the app:
+
+  curl -i -X POST -d "firstName=Homer&lastName=Simpson" http://localhost:8080/person/add
+  curl -i http://localhost:8080/person/greet?firstName=Homer
+
+
+
+Sven, 21.5.2014
