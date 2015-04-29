@@ -1,0 +1,3 @@
+- run './gradlew clean assemble'
+- run 'java -jar build/libs/mbean_test-0.0.1.jar'
+
